@@ -1,0 +1,2 @@
+python-terraform~=0.10.1
+awscli~=1.18.110

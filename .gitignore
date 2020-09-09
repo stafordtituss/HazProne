@@ -1,0 +1,7 @@
+**.terraform
+**tfstate
+**tfstate**
+**.tfout
+trash/
+whitelist.txt
+__pycache__
