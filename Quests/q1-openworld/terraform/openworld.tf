@@ -260,9 +260,11 @@ resource "aws_instance" "openworld-server" {
         sudo rm /var/www/html/index.html
         sudo apt-get install -y php libapache2-mod-php php-mcrypt
         sudo echo "claymore:MyChemicalRomance" >> /var/www/html/credentials.txt
+        sudo echo "The answer for exercise 1 is SGF6UHJvbmV7WTB1XzRyM19uMHRfNTBfYjRkfQ==" >> /home/secret_file.txt
         sudo echo ${base64encode(file("../webapp/index.php"))} | base64 --decode > /var/www/html/index.php
         sudo echo ${base64encode(file("../webapp/login.php"))} | base64 --decode > /var/www/html/login.php
         sudo echo ${base64encode(file("../webapp/welcome.php"))} | base64 --decode > /var/www/html/welcome.php
+        sudo echo ${base64encode(file("../webapp/notwelcome.php"))} | base64 --decode > /var/www/html/notwelcome.php
         sudo systemctl restart apache2
         EOF
 

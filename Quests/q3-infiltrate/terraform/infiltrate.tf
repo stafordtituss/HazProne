@@ -35,7 +35,8 @@ resource "aws_instance" "secret-server" {
     private_ip = "192.168.0.112"
     user_data = <<-EOF
         #!/bin/bash
-        echo "The Flag is: HazProne{W3_H@v3_b33N_C0mPr0m1s3D}" >> /home/ubuntu/imp.txt ;
+        echo "The Flag is: HazProne{W3_H@v3_b33N_C0mPr0m1s3D}" >> /home/ubuntu/imp.txt
+        echo "The answer for Exercise 2 is SGF6UHJvbmV7VGghNV8hNV9uMHRfVGgzXzNeRH0=" >> /mnt/secrets.txt
         EOF
     
     root_block_device {

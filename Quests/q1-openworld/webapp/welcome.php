@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Welcome User!!</h1>
+    <h3>You can login to the ec2 instance using the same credentials you used to login here!!</h3>
 </body>
 </html>
