@@ -116,7 +116,7 @@ output "weaver_access_key_id" {
     value = aws_iam_access_key.weaver-keys.id
 }
 
-output "weaver_secret_key_id" {
+output "weaver_secret_key" {
     value = aws_iam_access_key.weaver-keys.secret
 } 
 
@@ -124,7 +124,7 @@ output "user_2" {
     value = aws_iam_user.starker.name
 }
 
-output "starker_access_key" {
+output "starker_access_key_id" {
     value = aws_iam_access_key.starker-keys.id
 }
 

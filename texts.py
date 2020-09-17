@@ -20,6 +20,7 @@ HAZPRONE = '''
                     []    q1-openworld
                     []    q2-up
                     []    q3-infiltrate
+                    []    q4-finals
 
         profile   : This argument is required to use the profile
                     configured using the aws cli tool. 
@@ -32,6 +33,7 @@ HAZPRONE = '''
             <quest-name> : [] q1-openworld
                            [] q2-up
                            [] q3-infiltrate 
+                           [] q4-finals
 
     '''
 
@@ -65,11 +67,24 @@ INFILTRATE = '''
     QUEST 3 - infiltrate :
     ===================================================================
 
-        The infiltrate quest is the second quest in version 
+        The infiltrate quest is the third quest in version 
         0.1.0 of Hazprone. On starting this quest you are 
         provided the public ip of a website where you must
         try to access the secret file stored within a private
         EC2 Instance.
+
+    ===================================================================
+            '''
+
+FINALS = '''
+    QUEST 4 - finals :
+    ===================================================================
+
+        The finals quest is the fourth quest in version 
+        0.1.0 of Hazprone. On starting this quest you are 
+        provided the public ip of a website where you must
+        try to access the secret flag stored within a dynamodb
+        table.
 
     ===================================================================
             '''
@@ -80,6 +95,7 @@ QUESTS = '''
             [] q1-openworld
             [] q2-up
             [] q3-infiltrate
+            [] q4-finals
         '''
 
 QUESTS_WRONG = '''
@@ -88,5 +104,6 @@ QUESTS_WRONG = '''
             [] q1-openworld
             [] q2-up
             [] q3-infiltrate
+            [] q4-finals
             '''
 

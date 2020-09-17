@@ -50,6 +50,9 @@ elif sys.argv[1].casefold() == "quest":
         elif sys.argv[2].casefold() == "q3-infiltrate":
             print(texts.INFILTRATE)
             sys.exit()
+        elif sys.argv[2].casefold() == "q4-finals":
+            print(texts.FINALS)
+            sys.exit()
         else:
             print(texts.QUESTS)
             sys.exit()
@@ -78,7 +81,7 @@ else:
     if operation != "start" and operation != "stop":
         print("Operation must be either start or stop only!!")
         sys.exit()
-    elif quest != "q1-openworld" and quest != "q2-up" and quest != "q3-infiltrate":
+    elif quest != "q1-openworld" and quest != "q2-up" and quest != "q3-infiltrate" and quest != "q4-finals":
         print(texts.QUESTS_WRONG)
         sys.exit()
     else:
@@ -133,9 +136,9 @@ HAZPRONE :: whitelist.txt file does not exist. Hazprone will
         else:
             print('''
 HAZPRONE :: whitelist.txt file exists! Type yes if you would like 
-                Hazprone to curl your IP Adress from ifconfig.me and 
-                overwrite the existing whitelist.txt file, otherwise 
-                type no to continue with existing file.\n
+            Hazprone to curl your IP Adress from ifconfig.me and 
+            overwrite the existing whitelist.txt file, otherwise 
+            type no to continue with existing file.\n
             ''')
             whitelist_conf = input("Your Entry : ")
             if whitelist_conf == "yes":
@@ -180,6 +183,9 @@ elif quest_id == "q2-up":
 elif quest_id == "q3-infiltrate":
     quest_folder = "./Quests/q3-infiltrate/terraform"
     quest_game_env = f'./q3-infiltrate-env-{rand}'
+elif quest_id == "q4-finals":
+    quest_folder = "./Quests/q4-finals/terraform"
+    quest_game_env = f'./q4-finals-env-{rand}'
 else:
     print("\nHAZPRONE :: Internal Error! Please try again!!\n")
     sys.exit()
@@ -267,8 +273,8 @@ elif opr == "stop" and user_prof:
     if not os.path.exists(quest_game_env_del):
         print('''
     HAZPRONE :: Internal Error!! The Quest folder can't be found!! 
-                  Manually destroy the AWS Resources and move the 
-                  quest folder to ./trash\n
+                Manually destroy the AWS Resources and move the 
+                quest folder to ./trash\n
         ''')
         sys.exit()
     return_code, stdout, stderr = tf.destroy(capture_output=False, var={'profile': user_prof, 'region': region, 'userIP': ip_addr})

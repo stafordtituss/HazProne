@@ -276,7 +276,7 @@ resource "aws_instance" "openworld-server" {
 
 #Outputs
 output "ip" {
-    value = aws_instance.openworld-server.public_ip
+    value = "${aws_instance.openworld-server.public_ip}/index.php"
 }
 
 output "nikola-access-key-id" {
