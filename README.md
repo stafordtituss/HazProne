@@ -7,3 +7,5 @@ It consists of several vulnerable, close to real-world scenarios dubbed “Quest
 Through this, a better insight into the different types of vulnerabilities and ways to exploit the AWS resources can be gained.
 
 The framework contains four different quests as of today with the assurance that many more quests will be added in the near future.
+
+![HazProne](https://github.com/stafordtituss/HazProne/HazProne_Screenshot.png?raw=true)
