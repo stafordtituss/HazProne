@@ -8,4 +8,4 @@ Through this, a better insight into the different types of vulnerabilities and w
 
 The framework contains four different quests as of today with the assurance that many more quests will be added in the near future.
 
-![HazProne](https://github.com/stafordtituss/HazProne/HazProne_Screenshot.png?raw=true)
+![HazProne](https://github.com/stafordtituss/HazProne/blob/master/HazProne_Screenshot.png?raw=true)
