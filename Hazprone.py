@@ -36,6 +36,9 @@ rand = f'{day}-{month}-{year}-{hour}-{minute}-{seconds}-{time}'
 
 # Beginning of Functions-----------------------------------------------------
 
+if len(sys.argv) == 1:
+	print(texts.HAZPRONE)
+	sys.exit()
 if sys.argv[1].casefold() == "help":
     print(texts.HAZPRONE)
     sys.exit()
