@@ -284,7 +284,7 @@ elif opr == "stop" and user_prof:
                 quest folder to ./trash\n
         ''')
         sys.exit()
-    return_code, stdout, stderr = tf.destroy(capture_output=False, var={'profile': user_prof, 'region': region, 'userIP': ip_addr}, force=False)
+    return_code, stdout, stderr = tf.destroy(capture_output=False, var={'profile': user_prof, 'region': region, 'userIP': ip_addr}, force=IsNotFlagged, auto_approve=True)
     if return_code != 0:
         print("\nHAZPRONE :: Terraform has returned an Error Code. Please try again or manually destroy the resource!\n")
         sys.exit()
