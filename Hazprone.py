@@ -108,6 +108,10 @@ else:
             opr = "stop"
             quest_id = quest
             user_prof = profile
+            with open("./whitelist.txt", "r") as ip_file:
+                ip = ip_file.read()
+                ip_addr = ip
+            
 
     elif operation == "start":
         print("Checking for whitelist.txt!!\n")
@@ -280,7 +284,7 @@ elif opr == "stop" and user_prof:
                 quest folder to ./trash\n
         ''')
         sys.exit()
-    return_code, stdout, stderr = tf.destroy(capture_output=False, var={'profile': user_prof, 'region': region, 'userIP': ip_addr})
+    return_code, stdout, stderr = tf.destroy(capture_output=False, var={'profile': user_prof, 'region': region, 'userIP': ip_addr}, force=False)
     if return_code != 0:
         print("\nHAZPRONE :: Terraform has returned an Error Code. Please try again or manually destroy the resource!\n")
         sys.exit()

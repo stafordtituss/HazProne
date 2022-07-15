@@ -160,9 +160,12 @@ resource "aws_iam_instance_profile" "access-ddb-instance-prof" {
 
 #S3 Bucket
 resource "aws_s3_bucket" "secret-bucket" {
-    bucket = "openworld-secret-bucket"
-    acl = "private"
     force_destroy = true
+}
+
+resource "aws_s3_bucket_acl" "secret-bucket-acl" {
+    bucket = aws_s3_bucket.secret-bucket.id
+    acl = "private"
 }
 
 resource "aws_s3_bucket_object" "top-secret-data" {
@@ -284,5 +287,5 @@ output "nikola-access-key-id" {
 }
 
 output "nikolas-secret-key" {
-    value = aws_iam_access_key.nikolas-keys.secret
+    value = nonsensitive(aws_iam_access_key.nikolas-keys.secret)
 }
