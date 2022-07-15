@@ -1,4 +1,5 @@
-# Hazprone
+# Hazprone         <a href="https://www.toolswatch.org/blackhat-arsenal-us-2011-archive/"><img alt="Black Hat Arsenal USA 2011" src="https://raw.githubusercontent.com/toolswatch/badges/master/arsenal/europe/2021.svg?sanitize=true" /></a>
+
  
 HazProne is a Cloud Pentesting Framework that emulates close to Real-World Scenarios by deploying Vulnerable-By-Demand aws resources enabling you to pentest Vulnerabilities within, and hence, gain a better understanding of what could go wrong and why!!
 
